@@ -20,13 +20,17 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 
     var attended=document.querySelector('.attended');
-    attended.innerHTML+=` ${data.present}`;
+    if(data.present>0 && data.total>0)
+        attended.innerHTML+=` ${data.present}`;
+    else
+        attended.innerHTML+=` 0`;
+
 
     var percent=document.querySelector('.percent');
     if(data.present>0 && data.total>0)
         percent.innerHTML+=` ${(data.present/data.total)*100} % `;
 
     else
-       percent.innerHTML+=` ${data.present} %`;
+       percent.innerHTML+=` 0 %`;
 
 })
