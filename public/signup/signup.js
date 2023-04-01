@@ -42,6 +42,8 @@ document.addEventListener('DOMContentLoaded',()=>{
             console.log("response");
         //   console.log(data.user_info);
 
+          localStorage.setItem('myData',JSON.stringify(data.user_info));
+          location.href='./student/student.html'
 
         // location.href='./photo.html';
     })
