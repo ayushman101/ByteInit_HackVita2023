@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     attended.innerHTML+=` ${data.present}`;
 
     var percent=document.querySelector('.percent');
-    if(data.present>0)
+    if(data.present>0 && data.total>0)
         percent.innerHTML+=` ${(data.present/data.total)*100} % `;
 
     else
